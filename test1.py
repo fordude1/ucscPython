@@ -1,10 +1,11 @@
 # These are just some initial tests - nothing really exciting here
 # for my UCSC Python class
+# These are being pushed to my git repository through PyCharm Community Edition
 
 # Print Hello
 print "Hello!"
 
-# Assign the 42 to the variable answer
+# Using the assignment operator to give answer a value
 answer = 42
 
 # Print the results
