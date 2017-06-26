@@ -63,7 +63,8 @@ else:
         height_meters = float(height_inches)/inches_to_meters
         print "Your height in inches is: ", height_inches
         print "Your height in meters is: ", height_meters
-        print
+
+print
 
 # Lab 2 question 4 - Write a program that asks the user for two integers.
 # Then apply all the operators we have learned or head about thus far:
