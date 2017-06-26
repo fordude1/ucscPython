@@ -1,6 +1,6 @@
 # Lab 2 from Week 1
 
-# Question 1 Find the modulor for the following
+# Question 1 Find the modulo for the following
 print "Lab 2, Question 1:"
 print "0 modulo 5 = ",(0%5)
 print "1 modulo 5 = ",(1%5)
