@@ -1,6 +1,6 @@
 # Lab 2 from Week 1
 
-# Question 1 Find the modulo for the following
+# Question 1 Find the modulor for the following
 print "Lab 2, Question 1:"
 print "0 modulo 5 = ",(0%5)
 print "1 modulo 5 = ",(1%5)
@@ -30,7 +30,9 @@ else:
         print "Number is even."
     else:
         print "Number is odd."
+
 print
+
 # Question 3 Write a small program that asks the user for their height.  First ask the user
 # for the height portion in feet, and then ask for the inches portion.  Convert
 # this height to meters.  There are 39.3701 inces in 1 meter.
@@ -61,7 +63,7 @@ else:
         height_meters = float(height_inches)/inches_to_meters
         print "Your height in inches is: ", height_inches
         print "Your height in meters is: ", height_meters
-print
+        print
 
 # Lab 2 question 4 - Write a program that asks the user for two integers.
 # Then apply all the operators we have learned or head about thus far:
