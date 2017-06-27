@@ -1,4 +1,6 @@
-# Lab 2 from Week 1
+# Hauns Froehlingsdorf
+# Python Programming for Beginners
+# Lab 2, Week 1
 
 # Question 1 Find the modulo for the following
 print "Lab 2, Question 1:"

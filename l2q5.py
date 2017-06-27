@@ -1,3 +1,7 @@
+# Hauns Froehlingsdorf
+# Python Programming for Beginners
+# Lab 2, Question 5
+#
 # Write a program or use the interpreter to
 # determine the result of:
 # 4/2 =

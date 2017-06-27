@@ -1,3 +1,6 @@
+# Hauns Froehlingsdorf
+# Python Programming for Beginners
+#
 # These are just some initial tests - nothing really exciting here
 # for my UCSC Python class
 # These are being pushed to my git repository through PyCharm Community Edition

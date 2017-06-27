@@ -1,7 +1,10 @@
+# Hauns Froehlingsdorf
+# Python Programming for Beginners
+#
 # Testing user input
 # and catching exceptions
 # NOTE: indenting is very important in python
-# Ask the user to input their agea nd birth year,
+# Ask the user to input their age and birth year,
 # Read this from stdin, and output their input values
 
 # Inquire age from user

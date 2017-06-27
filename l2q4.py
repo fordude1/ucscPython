@@ -1,4 +1,7 @@
-# Lab 2 question 4
+# Hauns Froehlingsdorf
+# Python Programming for Beginners
+# Lab 2, question 4
+#
 # Write a program that asks the user for two integers.
 # Then apply all the operators we have learned or head about thus far:
 # addition, subtraction, multiplication, division, aand modulo.  Make
