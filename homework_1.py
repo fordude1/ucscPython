@@ -18,3 +18,19 @@
 # in input.  It is not important to error check on their dream job title.  Just assume it
 # will be a reasonable string.
 
+# Ask user for their dream job title
+dream_job_title = raw_input("Please tell me your dream job title: ")
+
+# Ask them the hourly wage they want to earn
+print '''For the next question, assume you work 48 weeks a year, with 4 weeks of vacation.
+You will be paid over a period of 52 weeks.'''
+hourly_wage_request = raw_input("Please enter the hourly wage you want to earn (ie. 10.50): ")
+
+# Ask them how much they feel they will need at retirement
+retirement_amount = raw_input("How much money will you need at retirement time?: ")
+
+print "Your dream job is: ", dream_job_title
+print "You want to make: ", hourly_wage_request, "dollars an hour."
+print "You need to have", retirement_amount, "at retirement time."
+
+
