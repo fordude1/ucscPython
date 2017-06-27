@@ -29,8 +29,16 @@ hourly_wage_request = raw_input("Please enter the hourly wage you want to earn (
 # Ask them how much they feel they will need at retirement
 retirement_amount = raw_input("How much money will you need at retirement time?: ")
 
-print "Your dream job is: ", dream_job_title
-print "You want to make: ", hourly_wage_request, "dollars an hour."
-print "You need to have", retirement_amount, "at retirement time."
+# Annual income
+annual_income = float(hourly_wage_request) * 40 * 52
 
+# Years until retirement
+years_to_retirement = float(retirement_amount) / annual_income
+
+# Print results from above
+print "Your dream job is: ", dream_job_title
+print "You want to make: $", float(hourly_wage_request), "an hour."
+print "You want to have: $", float(retirement_amount), "at retirement time."
+print "With this current income, you will make: $", float(annual_income), "per year."
+print "At this annual income, you will need to work :", int(years_to_retirement), "years to attain this."
 
