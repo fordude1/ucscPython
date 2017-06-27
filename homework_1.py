@@ -25,31 +25,38 @@ dream_job_title = raw_input("Please tell me your dream job title: ")
 print '''For the next question, assume you work 48 weeks a year, with 4 weeks of vacation.
 You will be paid over a period of 52 weeks.'''
 hourly_wage_request = raw_input("Please enter the hourly wage you want to earn (ie. 10.50): ")
-
-# Ask them how much they feel they will need at retirement
-retirement_amount = raw_input("How much money will you need at retirement time?: ")
-
-# Annual income
-annual_income = float(hourly_wage_request) * 40 * 52
-
-# Years until retirement
-years_to_retirement = float(retirement_amount) / annual_income
-
-
-
-# Print results from above
-print "Your dream job is: ", dream_job_title
-print "You want to make: $", float(hourly_wage_request), "an hour."
-print "You want to have: $", float(retirement_amount), "at retirement time."
-print "With this income, you will make $", float(annual_income), "per year."
-print "With this annual income, you will need to work", int(years_to_retirement), "years to attain this."
-
-# Determine if the years required are odd or even
-odd_or_even_years = years_to_retirement % 2
-if int(odd_or_even_years) == 0:
-    years_result = "even"
+# Test for exception
+try:
+    test_hourly_wage_request = float(hourly_wage_request)
+except ValueError:
+    print "The Value entered was not an integer or floating number."
+    print "Program is exiting!"
 else:
-    years_result = "odd"
 
-print "The number of years to save this is an", years_result, "number of years."
+    # Ask them how much they feel they will need at retirement
+    retirement_amount = raw_input("How much money will you need at retirement time?: ")
+
+    # Annual income
+    annual_income = float(hourly_wage_request) * 40 * 52
+
+    # Years until retirement
+    years_to_retirement = float(retirement_amount) / annual_income
+
+
+
+    # Print results from above
+    print "Your dream job is: ", dream_job_title
+    print "You want to make: $", float(hourly_wage_request), "an hour."
+    print "You want to have: $", float(retirement_amount), "at retirement time."
+    print "With this income, you will make $", float(annual_income), "per year."
+    print "With this annual income, you will need to work", int(years_to_retirement), "years to attain this."
+
+    # Determine if the years required are odd or even using modulo
+    odd_or_even_years = years_to_retirement % 2
+    if int(odd_or_even_years) == 0:
+        years_result = "even"
+    else:
+        years_result = "odd"
+
+    print "The number of years to save this is an", years_result, "number of years."
 
