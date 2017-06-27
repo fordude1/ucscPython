@@ -1,0 +1,15 @@
+/usr/bin/python2.7 /home/hfroehli/ucscPython/lessons/homework_1.py
+Please tell me your dream job title: Chief Technical Officer
+For the next question, assume you work 48 weeks a year, with 4 weeks of vacation.
+You will be paid over a period of 52 weeks.
+Please enter the hourly wage you want to earn (ie. 10.50): 150.95
+How much money will you need at retirement time?: 2000000
+Your dream job is:  Chief Technical Officer
+You want to make: $ 150.95 an hour.
+You want to have: $ 2000000.0 at retirement time.
+With this income, you will make $ 313976.0 per year.
+With this annual income, you will need to work 6 years to attain this.
+The number of years to save this is an even number of years.
+
+Process finished with exit code 0
+
