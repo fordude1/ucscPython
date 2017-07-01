@@ -16,3 +16,22 @@ if i is the sum of j and k, and j is not
 equal to sum of i and k, then x equals j
 times k divided by i
 '''
+
+# First problem
+if i > 2 and i < 78:
+    i - 2
+
+
+# Second problem
+if j !> 10 and j !< 15 and == 11:
+    k = j * 2
+
+# Third problem
+if k != 7 and i == 5 or j > 8:
+    x = 200/k
+
+# Fourth problem
+if i == j + k and j != i + k:
+    x = j * k / i
+
+
