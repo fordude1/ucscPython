@@ -17,6 +17,7 @@ while True:
             # Nest the number test here to prevent exceptions for non integer input
             if int_number > 0:
                 print 'This is greater than 0'
+                print 'Program will now exit.'
                 break
     except:
             ValueError
