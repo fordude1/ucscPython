@@ -4,7 +4,11 @@ This is a compilation of my most commonly used Functions.
 It is by no means an exhaustive list.
 '''
 
-misc_int = 10
+# This function tests for valid integers - variable misc_int
+# Example of how to use this double commented below
+
+# What is value to test?
+## misc_int = 10
 
 def catch_intvalex(misc_int):
     # test for Value Error exception
@@ -17,4 +21,5 @@ def catch_intvalex(misc_int):
         print misc_int, "is an acceptable integer."
         return misc_int
 
-catch_intvalex(misc_int)
+# Call function
+## catch_intvalex(misc_int)
