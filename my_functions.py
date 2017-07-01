@@ -10,7 +10,7 @@ It is by no means an exhaustive list.
 # What is value to test?
 ## misc_int = 10
 
-def catch_intvalex(misc_int):
+def Catch_Intvalex(misc_int):
     # test for Value Error exception
     try:
         test_int = int(misc_int)
