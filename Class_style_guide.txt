@@ -1,0 +1,12 @@
+Style Guide for all programs
+
+This was adapted from the other instructors Style Guide so that we remain consistent in our teaching of programming styles:
+
+* All labels (names of variables) should be descriptive.
+* Labels for numbers and strings should be all lower case with an underscore to separate words (e.g. first_name).
+* Labels for constants should be all capitalized, also with an underscore to separate words.
+* Labels for functions should be UpperCamelCase (e.g. GetFirstName).
+* Labels for functions should include verbs (e.g. getLastName).
+* Try to write classes, methods of classes, or functions to house all your code
+* Labels for classes should also be UpperCamelCase ( class ClassName: ).
+* Labels for classes should be nouns ( class Person: ).
