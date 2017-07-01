@@ -5,7 +5,7 @@ It is by no means an exhaustive list.
 '''
 
 # This function tests for valid integers - variable misc_int
-# Example of how to use this double commented below
+# Example of how to use this is double commented below
 
 # What is value to test?
 ## misc_int = 10
