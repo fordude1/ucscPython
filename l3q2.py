@@ -6,19 +6,6 @@ will keep on asking the user for the number until it is
 valid.
 '''
 
-#while True:
-#    age = raw_input('Give me your age; type "quit" to end.\n')
-
-#    if age == 'quit':
-#        break
-#    try:
-
-#        int_age = int(age)
-#        print 'Your age is', int_age
-#    except:
-#        ValueError
-#        print 'Your age must be an integer value'
-
 while True:
     # Request user input
     positive_integer_request = raw_input('Please provide a number that is greater than 0:\n')
