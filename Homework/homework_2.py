@@ -3,17 +3,31 @@
 # Week 2 Homework
 
 '''
-Write a program that asks the user for a letter. The program should then determine if the letter is a vowel or not.
+Write a program that asks the user for a letter.
+The program should then determine if the letter is a vowel or not.
+Make sure you account for user input error. Test your code by trying to cause errors in input.
 '''
 
-# This function will repeatly as the user for a single letter until
-# the user types "quit" to exit the program or they have entered a vowel.
 def AskForLetter():
     '''
     This function will use the built-in python function called len.
     If the len of the user input is 1, then this function should call the second function below.
-    :return:
     '''
+    # This function will repeatly ask the user for a single letter until
+    # the user types "quit" to exit the program or they have entered a vowel.
+
+    # while loop to check for exceptions
+    while True:
+        letter_request = raw_input('Please input a single letter.\n')
+        try:
+            letter_test = str(letter_request)
+        except:
+            ValueError
+            print , "that is not a letter.  Please again."
+            continue
+
+        # return the value of the letter
+        return letter_request
 
 
 def IsVowel(letter):
