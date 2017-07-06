@@ -16,18 +16,16 @@ def AskForLetter():
     # This function will repeatly ask the user for a single letter until
     # the user types "quit" to exit the program or they have entered a vowel.
 
-    # while loop to check for exceptions
     while True:
-        letter_request = raw_input('Please input a single letter.\n')
-        try:
-            letter_test = str(letter_request)
-        except:
-            ValueError
-            print , "that is not a letter.  Please again."
-            continue
-
-        # return the value of the letter
-        return letter_request
+        letter = raw_input('Please input a single letter.\n')
+        if letter_request == 'quit':
+            break
+        if len(letter_request) == 0 or len(letter_request) > 1:
+            print "you didn't enter anything or more than 1 letter"
+        else:
+            print "you entered 1 letter"
+            # return the value of the letter
+            return IsVowel(letter)
 
 
 def IsVowel(letter):
@@ -36,9 +34,8 @@ def IsVowel(letter):
     will determine if this letter is a vowel or not.
     If it is a vowel it will return True and is not it will return To determine
     if letter is vowel or not, this function will call a third and a fourth function below.
-    :param letter:
-    :return:
     '''
+
 
 
 def IsLowercaseVowel(letter):
