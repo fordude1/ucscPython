@@ -8,6 +8,8 @@ The program should then determine if the letter is a vowel or not.
 Make sure you account for user input error. Test your code by trying to cause errors in input.
 '''
 
+VOWELS = ('a','e','i','o','u','A','E','I','O','U')
+
 def AskForLetter():
     '''
     This function will use the built-in python function called len.
@@ -24,7 +26,6 @@ def AskForLetter():
             print "you didn't enter anything or more than 1 letter"
 
         else:
-            print "you entered a number."
             # return the value of the letter
             return IsVowel(letter)
 
@@ -36,7 +37,8 @@ def IsVowel(letter):
     if letter is vowel or not, this function will call a third and a fourth function below.
     '''
 
-    if letter == "a" or "A" or "e" or "E" or "i" or "I" or "o" or "O" or "u" or "U":
+    if (letter == 'a' or letter == 'A' or letter == 'e' or letter == 'E' or letter == 'i' or letter == 'I'
+        or letter == 'o' or letter == 'O' or letter == 'u' or letter == 'U'):
         return IsLowercaseVowel(letter)
     else:
         print "letter is consonant"
