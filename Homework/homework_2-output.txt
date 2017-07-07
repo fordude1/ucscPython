@@ -1,0 +1,7 @@
+/usr/bin/python2.7 /home/user/PycharmProjects/ucscPython/Homework/homework_2.py
+Please input a single letter.
+a
+you entered a number.
+The letter you typed ' a 'is a vowell.
+
+Process finished with exit code 0
