@@ -1,0 +1,27 @@
+# Strings and Lists
+
+var1 = "Hello Class"
+# print the first character of that variable 
+print var1[0]
+
+sentence = "Who Is Kevin Durant?"
+ 
+sentence
+#'Who Is Kevin Durant?'
+split_sentence = sentence.split()
+print split_sentence
+#['Who', 'Is', 'Kevin', 'Durant?']
+for word in split_sentence:
+	print word
+
+	
+#Who
+#Is
+#Kevin
+#Durant?
+for word in split_sentence:
+	if word[0] == 'K':
+		print word, 'yes'
+
+		
+#Kevin yes
