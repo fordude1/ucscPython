@@ -8,7 +8,6 @@ The program should then determine if the letter is a vowel or not.
 Make sure you account for user input error. Test your code by trying to cause errors in input.
 '''
 
-VOWELS = ('a','e','i','o','u','A','E','I','O','U')
 
 def AskForLetter():
     '''
@@ -72,7 +71,6 @@ def PrintIsVowel(letter):
     '''
 
     print "The letter you typed", "'",letter,"'" "is a vowell."
-
 
 # Start the program
 AskForLetter()
