@@ -40,7 +40,14 @@ sentence = raw_input("Please type a sentence for me.")
 
 print "Your sentence is: ",sentence
 
+print "Upper Case: "
 UpperCase()
+print
+
+print "Lower Case: "
 LowerCase()
+print
+
+print "Split with commas: "
 SplitComma()
 
