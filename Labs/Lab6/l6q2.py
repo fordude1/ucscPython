@@ -29,9 +29,9 @@ def LowerCase():
     print lower
 
 def SplitComma():
-    '''
+    """
     split sentence up and place comma between each element
-    '''
+    """
     splits=sentence.split()
     print splits
 
