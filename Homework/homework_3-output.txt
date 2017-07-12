@@ -1,0 +1,12 @@
+# Hauns Froehlingsdorf
+# Python Programming for Beginners
+# Week 3 Homework output
+
+/usr/bin/python2.7 /home/user/PycharmProjects/ucscPython/Homework/homework_3.py
+Please type a 3 word phrase to convert to pig latin.  type 'QUIT' to exit program.MY BIG EAGLE
+Your phrase in pig latin is: ymay igbay eaglehay
+Please type a 3 word phrase to convert to pig latin.  type 'QUIT' to exit program.My
+Please type a 3 word phrase to convert to pig latin.  type 'QUIT' to exit program.MY BIG
+Please type a 3 word phrase to convert to pig latin.  type 'QUIT' to exit program.QUIT
+
+Process finished with exit code 0
