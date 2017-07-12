@@ -39,33 +39,44 @@ def AskUserForSentence ():
 def LowercaseSentence (phrase):
     '''
     convert the sentence to lower case
-    :return:
+    :return:lowercase_phrase
     '''
 
-    # initialize lowerphrase
-    lowerphrase = []
+    # initialize new list lowercase_phrase
+    lowercase_phrase = []
 
     # use a for loop to convert each word to lowercase
     for word in phrase:
         case_word = word.lower()
+
         # add the lower case word to the list
-        lowerphrase.append(case_word)
+        lowercase_phrase.append(case_word)
 
-    print lowerphrase
+    # Send this off to be split into a list
+    SplitSentenceIntoList(lowercase_phrase)
 
 
-
-def SplitSentenceIntoList ():
+def SplitSentenceIntoList (lowercase_phrase):
     '''
     split the sentence into a list
     :return:
     '''
+    split_list = lowercase_phrase
 
-def ConvertWordToPigLatin ():
+    # Send the split list to be conversion function
+    ConvertWordToPigLatin(split_list)
+
+def ConvertWordToPigLatin (split_list):
     '''
     convert each word to pig latin
     :return:
     '''
+    for word in split_list:
+        # Check to see if first letter is vowel
+        if word[0] in VOWELS:
+            print word,"in pig latin is:",word+"hay"
+        else:
+            print word,"in pig latin is:",word[1:]+word[0]+"ay"
 
 def PrintThreeWordPhrase ():
     '''
