@@ -59,7 +59,7 @@ def LowercaseSentence (phrase):
 def SplitSentenceIntoList (lowercase_phrase):
     '''
     split the sentence into a list
-    :return:
+    :return:split_list
     '''
     split_list = lowercase_phrase
 
@@ -69,20 +69,33 @@ def SplitSentenceIntoList (lowercase_phrase):
 def ConvertWordToPigLatin (split_list):
     '''
     convert each word to pig latin
-    :return:
+    :return:pig_latin
     '''
-    for word in split_list:
-        # Check to see if first letter is vowel
-        if word[0] in VOWELS:
-            print word,"in pig latin is:",word+"hay"
-        else:
-            print word,"in pig latin is:",word[1:]+word[0]+"ay"
 
-def PrintThreeWordPhrase ():
+    # initialize pig_latin list
+    pig_latin = []
+
+    # for loop to work on each word
+    for word in split_list:
+
+        # check to see if first letter is vowel
+        if word[0] in VOWELS:
+            pig_latin.append(word+"hay") # print word,"in pig latin is:",word+"hay"
+
+        # word does not start with vowel, apply non vowel change
+        else:
+            pig_latin.append(word[1:]+word[0]+"ay") # print word,"in pig latin is:",word[1:]+word[0]+"ay"
+
+    # send converted phrase to be printed
+    PrintThreeWordPhrase(pig_latin)
+
+def PrintThreeWordPhrase (pig_latin):
     '''
     print the phrase in pig latin
-    :return:
     '''
+
+    # convert list to string for nice display
+    print "Your phrase in pig latin is:", ' '.join(pig_latin)
 
 # Run the program
 AskUserForSentence()
