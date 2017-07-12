@@ -10,13 +10,14 @@ start if list is 3 words - if not, have them re-enter
 # define the constant named VOWELS
 VOWELS = ["a","e","i","o","u"]
 
-# if letter in vowels
+# define our functions below
 
-def AskUserForSentence ():
+def AskUserForSentence():
     '''
     obtain 3 word phrase from user
     :return:phrase
     '''
+
 
     # initialize our list
     user_input = []
@@ -36,11 +37,12 @@ def AskUserForSentence ():
             # send the proper input to LowercaseSentence for case change
             LowercaseSentence(phrase)
 
-def LowercaseSentence (phrase):
+def LowercaseSentence(phrase):
     '''
     convert the sentence to lower case
     :return:lowercase_phrase
     '''
+
 
     # initialize new list lowercase_phrase
     lowercase_phrase = []
@@ -56,21 +58,24 @@ def LowercaseSentence (phrase):
     SplitSentenceIntoList(lowercase_phrase)
 
 
-def SplitSentenceIntoList (lowercase_phrase):
+def SplitSentenceIntoList(lowercase_phrase):
     '''
     split the sentence into a list
     :return:split_list
     '''
+
+
     split_list = lowercase_phrase
 
     # Send the split list to be conversion function
     ConvertWordToPigLatin(split_list)
 
-def ConvertWordToPigLatin (split_list):
+def ConvertWordToPigLatin(split_list):
     '''
     convert each word to pig latin
     :return:pig_latin
     '''
+
 
     # initialize pig_latin list
     pig_latin = []
@@ -80,22 +85,25 @@ def ConvertWordToPigLatin (split_list):
 
         # check to see if first letter is vowel
         if word[0] in VOWELS:
-            pig_latin.append(word+"hay") # print word,"in pig latin is:",word+"hay"
+            pig_latin.append(word+"hay")
 
         # word does not start with vowel, apply non vowel change
         else:
-            pig_latin.append(word[1:]+word[0]+"ay") # print word,"in pig latin is:",word[1:]+word[0]+"ay"
+            pig_latin.append(word[1:]+word[0]+"ay")
 
-    # send converted phrase to be printed
+    # send converted phrase to be displayed
     PrintThreeWordPhrase(pig_latin)
 
-def PrintThreeWordPhrase (pig_latin):
+def PrintThreeWordPhrase(pig_latin):
     '''
     print the phrase in pig latin
     '''
 
+
     # convert list to string for nice display
     print "Your phrase in pig latin is:", ' '.join(pig_latin)
+
+# end of functions
 
 # Run the program
 AskUserForSentence()
