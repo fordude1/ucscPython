@@ -15,7 +15,7 @@ def list_length():
     Determine the length of the list
     '''
     input_length = len(user_input)
-    print "length of your list is:", input_length
+    #print "length of your list is:", input_length
     return random_number(input_length)
 
 def random_number(length):
@@ -23,13 +23,16 @@ def random_number(length):
     selects a random number between 1 and list length
     '''
     ran_number = random.randrange(1,length)
-    print ran_number
+    print "The random number from your list is:", ran_number
+    return random_remove(ran_number)
 
-def random_remove():
+def random_remove(word):
     '''
     remove random number from list and print out list
     '''
-
+    print "Your list is:",user_input
+    print "A random variable from your list is:", user_input[word]
+    print "Your list without this variable is:", user_input[0:word]+user_input[word+1:]
 
 user_input = []
 # Get input from user
@@ -38,5 +41,5 @@ while user_input != "quit":
     if user_input == "quit":
         break
 
-    print "Your list is:", user_input
+    #print "Your list is:", user_input
     list_length()
