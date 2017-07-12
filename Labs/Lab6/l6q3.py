@@ -19,12 +19,12 @@ randomly chosen element from the list and print out the list.
 # import the random module
 import random
 
-def list_length():
+def list_length(the_input):
     '''
     determine the length of the list
     :return: input_length
     '''
-    input_length = len(user_input)
+    input_length = len(the_input)
     return random_number(input_length)
 
 def random_number(length):
@@ -44,6 +44,7 @@ def random_remove(number):
     print "A random variable from your list is:", user_input[number]
     print "Your list without this variable is:", user_input[0:number]+user_input[number+1:]
 
+
 # initialize our list
 user_input = []
 # a while loop seams logical to get user input and watch for quit to exit
@@ -51,6 +52,6 @@ while user_input != "quit":
     user_input = raw_input("Please type something for our list.  type quit to exit program.")
     if user_input == "quit":
         break
-
     # call the list function to determine length
-    list_length()
+    list_length(user_input)
+
