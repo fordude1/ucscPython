@@ -24,7 +24,7 @@ def AskUserForSentence():
 
     # a while loop seams logical to get user input and watch for QUIT to exit
     while True:
-        user_input = raw_input("Please type a 3 word phrase to convert to pig latin.  type 'QUIT' to exit program.")
+        user_input = raw_input("Please type a 3 word phrase to convert to pig latin.  Type 'QUIT' to exit program.")
         if user_input == "QUIT":
             break
 
