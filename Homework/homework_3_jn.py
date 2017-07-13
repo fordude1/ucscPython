@@ -33,15 +33,14 @@
 # 3 word phrases into pig latin until the user enters in the phrase QUIT.
 
 
-VOWELS = ('a, e, i, o, u, A, E, I, O, U')        
+VOWELS = ('a, e, i, o, u, A, E, I, O, U')
+
 
 def AskUserForSentence():
-
-        
     ask = True
 
     while ask == True:
-        
+
         sentence = raw_input('''Please enter 3 word phrase:
 Type 'quit' to end.\n''')
         if sentence == 'quit':
@@ -49,13 +48,15 @@ Type 'quit' to end.\n''')
 
             if sentence == True:
                 PrintThreeWordPhrase(sentence)
-            
-                
+
+
 def LowercaseSentence(sentence):
     lowercasesentence = sentence.lower()
 
+
 def SplitSsentenceIntoList(sentence):
     split_sentence = sentence.split()
+
 
 def ConvertWordToPigLatin(word):
     for word in split_sentence:
@@ -63,9 +64,10 @@ def ConvertWordToPigLatin(word):
             print word + "hay"
         else:
             print word[1:] + word[0] + "ay"
-            
-def PrintThreeWordPhrase(sentence):
 
+
+def PrintThreeWordPhrase(sentence):
     print "The 3 word phrase in Pig Latin is " + ConvertWordToPigLatin(word)
+
 
 AskUserForSentence()
