@@ -37,36 +37,51 @@ VOWELS = ('a, e, i, o, u, A, E, I, O, U')
 
 
 def AskUserForSentence():
-    ask = True
+    #ask = True # you have created what is called an infinite loop and it will never call your next function
 
-    while ask == True:
-
+    #while ask == True:
+    while True:  # This will help your first function
         sentence = raw_input('''Please enter 3 word phrase:
-Type 'quit' to end.\n''')
+        Type 'quit' to end.\n''')
         if sentence == 'quit':
-            ask = False
-
-            if sentence == True:
-                PrintThreeWordPhrase(sentence)
+            #ask = False # you could also put break in here to stop the program instead of False
+            break
+            # if sentence == True:
+        # PrintThreeWordPhrase(sentence) from here lets convert to lower case
+        LowercaseSentence(sentence)
 
 
 def LowercaseSentence(sentence):
     lowercasesentence = sentence.lower()
+    print "your phrase is:", lowercasesentence  # Just a test to make sure this function works
+    SplitSentenceIntoList(lowercasesentence)
 
+def SplitSentenceIntoList(lowercasesentence):
+        split_sentence = lowercasesentence.split(" ")
 
-def SplitSsentenceIntoList(sentence):
-    split_sentence = sentence.split()
+        print "Your split phrase is:", split_sentence
 
+        # from here, I recommend you use len to check for 3 words in your phrase
+        if len(split_sentence) == 3:
+            print "you have 3 words in your phrase!"
+            ConvertWordToPigLatin(split_sentence)
 
-def ConvertWordToPigLatin(word):
-    for word in split_sentence:
-        if letter in VOWELS == word[0]:
-            print word + "hay"
         else:
-            print word[1:] + word[0] + "ay"
+            print "you need three words in your phrase"
+            AskUserForSentence()
+
+def ConvertWordToPigLatin(split_sentence):
+    #for word in split_sentence:
+    #    if letter in VOWELS == word[0]:
+    #        print word + "hay"
+    #    else:
+    #
+    #         print word[1:] + word[0] + "ay"
+    print "We have 3 words in:", split_sentence
 
 
 def PrintThreeWordPhrase(sentence):
+
     print "The 3 word phrase in Pig Latin is " + ConvertWordToPigLatin(word)
 
 
