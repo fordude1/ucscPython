@@ -8,7 +8,7 @@ This program will require what is referred to in the industry as
 knowing what needs to be changed.
 '''
 
-def CalculateAveratge(homework_1, homework_2, homework_3, homework_4, homework_5):
+def CalculateAverage(homework_1, homework_2, homework_3, homework_4, homework_5):
 
     ave = (homework_1 + homework_2 + homework_3 + homework_4 + homework_5) / 5
 
@@ -22,7 +22,7 @@ def GetGrades ():
     homework_4 = 99
     homework_5 = 82
 
-    average = CalculateAveratge(homework_1, homework_2, homework_3, homework_4, homework_5)
+    average = CalculateAverage(homework_1, homework_2, homework_3, homework_4, homework_5)
 
     print 'Your homework average is', average
 
