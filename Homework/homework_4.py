@@ -66,18 +66,55 @@ def AskForCityName(city_number):
         if city_input in city_names:
             print "You can't have duplicate city names"
         else:
+
+            # Append city to list
             city_names.append(city_input)
             city = city + 1
 
-    print city_names
+    # send off to PrintFirstCitySentence
+    PrintFirstCitySentence(city_names)
+
+def PrintFirstCitySentence(city_names):
+    '''
+    print first sentence
+    '''
+
+    # initialize original_city_sentence
+    original_city_sentence = []
+
+   # let's start our first sentence
+    print "You would like to visit",
+
+    # list position starts at 0 - increment by 1 for display
+    for count, city in enumerate(city_names):
+        print city, "as city", count+1,
+
+    # Final part of sentence
+    print "on your trip.\n"
+
+    # Move on to PrintAddOneCityNumSentence
+    PrintAddOneCityNumSentence(city_names)
 
 
+def PrintAddOneCityNumSentence(city_names):
+    '''
+    Add 1 to each city
+    '''
+    # Since I alreay have the cities in lists, no need to use isdigit
 
-def PrintFirstCitySentence():
-    pass
+    # let's start our first sentence
+    print "You would like to visit",
 
-def PrintAddOneCityNumSentence():
-    pass
+    # list position starts at 0 - increment by 1 for display
+    for count, city in enumerate(city_names):
+        print city, "as city", count + 2,
+
+    # Final part of sentence
+    print "on your trip."
+
+    # and we are done
+    exit()
 
 
+# Start the program
 AskForNumberCities()
