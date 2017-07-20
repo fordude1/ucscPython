@@ -44,11 +44,34 @@ def AskForNumberCities():
                 if int(city_number) == 0:
                     print "You entered 0, you need to enter a number greater than 0."
                 else:
-                    print "The number of cities you want to visit is:", city_number
-                    break
+                    # If everything passes move on to AskForCityName
+                    AskForCityName(city_number)
 
-def AskForCityName():
-    pass
+def AskForCityName(city_number):
+    '''
+    Ask For name of cities
+    :return: city_names
+    '''
+
+    # set our counter to 0
+    city = 0
+    # initialize our city_names list
+    city_names = []
+
+    # use a while loop to make sure we enter in the right number of cities from city_number
+    while (city < int(city_number)):
+        city_input = raw_input('Please enter a city name you wish to visit.\n')
+
+        # test to see if the name is a duplicate
+        if city_input in city_names:
+            print "You can't have duplicate city names"
+        else:
+            city_names.append(city_input)
+            city = city + 1
+
+    print city_names
+
+
 
 def PrintFirstCitySentence():
     pass
