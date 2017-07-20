@@ -109,36 +109,45 @@ def PrintAddOneCityNumSentence(city_names):
         print city, "as city", count + 2,
 
     # Final part of sentence
-    print "on your trip."
+    print "on your trip.\n"
 
-    # and we are done
-    exit()
+    # call isdigit function
+    IsDigit()
 
 def IsDigit():
     '''
     Simple output showing how to use the isdigit() command
     '''
 
+    print "Now demonstrating how to use isdigit, split, and join:\n"
     my_sentence = 'This 1 day of programming has made me hungry 2 times and I was thirsty 3 times'
     print "Original sentence:", my_sentence
 
     # Split sentence into list
     sentence_to_list = my_sentence.split(" ", my_sentence.count(" "))
-    print sentence_to_list
 
     # use isdigit function to increment the digits by one
-    # for loop is your friend here
+    # for enumerated loop is your friend here
     for count, word in enumerate(sentence_to_list):
         if word.isdigit() == True:
+
+                # using enumerate to find position, we update the number
                 sentence_to_list[count] = int(word)+1
 
+    # use join map to combine str and integers
+    new_sentence = ' '.join(map(str, sentence_to_list))
 
-    print sentence_to_list
+    # print out our modified sentence
+    print "Modified sentence:", new_sentence
 
+    # exit program - we called with a loop
+    exit()
 
 
 
 
 # Start the program
-#AskForNumberCities()
+AskForNumberCities()
+
+# Because Id didn't use isdigit in the main program, here it is
 IsDigit()
