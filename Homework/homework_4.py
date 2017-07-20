@@ -79,13 +79,11 @@ def PrintFirstCitySentence(city_names):
     print first sentence
     '''
 
-    # initialize original_city_sentence
-    original_city_sentence = []
-
    # let's start our first sentence
     print "You would like to visit",
 
     # list position starts at 0 - increment by 1 for display
+    # loop to create this sentence.
     for count, city in enumerate(city_names):
         print city, "as city", count+1,
 
@@ -106,6 +104,7 @@ def PrintAddOneCityNumSentence(city_names):
     print "You would like to visit",
 
     # list position starts at 0 - increment by 1 for display
+    # loop to create this sentence
     for count, city in enumerate(city_names):
         print city, "as city", count + 2,
 
