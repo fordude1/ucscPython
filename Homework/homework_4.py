@@ -119,12 +119,26 @@ def IsDigit():
     Simple output showing how to use the isdigit() command
     '''
 
-    my_sentence = "This 1 day of programming has made me hungry 2 times and I was thirsty 3 times"
+    my_sentence = 'This 1 day of programming has made me hungry 2 times and I was thirsty 3 times'
+    print "Original sentence:", my_sentence
 
     # Split sentence into list
-    sentence_to_list = my_sentence.split(my_sentence)
+    sentence_to_list = my_sentence.split(" ", my_sentence.count(" "))
+    print sentence_to_list
+
+    # use isdigit function to increment the digits by one
+    # for loop is your friend here
+    for count, word in enumerate(sentence_to_list):
+        if word.isdigit() == True:
+                sentence_to_list[count] = int(word)+1
+
+
+    print sentence_to_list
+
+
 
 
 
 # Start the program
-AskForNumberCities()
+#AskForNumberCities()
+IsDigit()
