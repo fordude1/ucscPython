@@ -1,0 +1,30 @@
+# Hauns Froehlingsdorf
+# Python Programming for Beginners
+# Week 4 Homework
+
+hfroehli@hauns-ubuntu:~/ucscPython/lessons/Homework$ python homework_4.py
+How many cities would you like to visit?.
+0
+You entered 0, you need to enter a number greater than 0.
+How many cities would you like to visit?.
+alksdjf
+The Value, alksdjf is not a number, please type a number.
+How many cities would you like to visit?.
+
+You didn't enter anything
+How many cities would you like to visit?.
+3
+Please enter a city name you wish to visit.
+Milwaukee
+Please enter a city name you wish to visit.
+Waukesha
+Please enter a city name you wish to visit.
+Appleton
+You would like to visit Milwaukee as city 1 Waukesha as city 2 Appleton as city 3 on your trip.
+
+You would like to visit Milwaukee as city 2 Waukesha as city 3 Appleton as city 4 on your trip.
+
+Now demonstrating how to use isdigit, split, and join:
+
+Original sentence: This 1 day of programming has made me hungry 2 times and I was thirsty 3 times
+Modified sentence: This 2 day of programming has made me hungry 3 times and I was thirsty 4 times
