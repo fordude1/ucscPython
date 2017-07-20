@@ -103,7 +103,7 @@ def PrintAddOneCityNumSentence(city_names):
     # let's start our first sentence
     print "You would like to visit",
 
-    # list position starts at 0 - increment by 1 for display
+    # list position starts at 0 - increment by 2 for display
     # loop to create this sentence
     for count, city in enumerate(city_names):
         print city, "as city", count + 2,
@@ -113,6 +113,17 @@ def PrintAddOneCityNumSentence(city_names):
 
     # and we are done
     exit()
+
+def IsDigit():
+    '''
+    Simple output showing how to use the isdigit() command
+    '''
+
+    my_sentence = "This 1 day of programming has made me hungry 2 times and I was thirsty 3 times"
+
+    # Split sentence into list
+    sentence_to_list = my_sentence.split(my_sentence)
+
 
 
 # Start the program
