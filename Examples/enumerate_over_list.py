@@ -2,7 +2,7 @@
 enumerate_over_list.py - shows how you can enumerate over a list
 '''
 
-def EnumerateList (list_1):
+def EnumerateList(list_1):
 
     for i, item in enumerate(list_1):
         print 'index is', i
