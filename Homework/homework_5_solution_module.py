@@ -145,7 +145,6 @@ def WriteNewFile(head_list, atom_list, tail_list):
 # needed if file being called from commandline or run in IDLE
 # this makes this object a module
 if __name__=='__main__':
-
     # Run the program
     file_name = AskForFileName()
     all_file_contents = ReadFileContents(file_name)
