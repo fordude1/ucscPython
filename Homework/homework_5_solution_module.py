@@ -23,7 +23,6 @@ def AskForFileName():
         AskForFileName()
     else:
         # return the value of the letter
-        print "You entered: ", file_name
         return ReadFileContents(file_name)
 
 def ReadFileContents(file_name):
@@ -32,7 +31,10 @@ def ReadFileContents(file_name):
     :param file_name:
     :return:all_file_contents
     '''
-pass
+
+    #open and read all lines
+    all_file_contents = open(file_name)
+
 
 def BuildHeadList(all_file_contents ):
     '''
