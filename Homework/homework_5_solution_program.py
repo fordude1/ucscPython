@@ -8,6 +8,8 @@
 
 # import our solution module
 import homework_5_solution_module as h5sm
+
+# going to use itertools to save some code
 import itertools
 
 def Run():
@@ -40,20 +42,32 @@ def DifferenceTwoFiles(file_1, file_2):
     # This list should then be counted for the number of differences and that number output.
 
 
+    # no need to specify read as that is the default
     file1 = open(file_1)
     file2 = open(file_2)
+
+    # initialize our list
     diff_list = []
+
+    # initialize our counter
     diff_count = 0
 
     with open(file_1):
         with open(file_2):
-            for i, (lineA, lineB) in enumerate(itertools.izip_longest(file1, file2)):
-                if lineA != lineB:
-                    print lineB
-                    diff_list.append(lineA)
+            for i, (line1, line2) in enumerate(itertools.izip_longest(file1, file2)):
+                if line1 != line2:
+
+                    #show me the difference
+                    print line2
+                    # append to the diff_list
+                    diff_list.append(line1)
+
+                    # if there are differences, increase the count
                     diff_count += 1
-    print diff_count
-    return diff_list
+
+    # print out the difference count
+    print "The diff count is:", diff_count
+    #return diff_list
 
 # Start the program
 Run()
