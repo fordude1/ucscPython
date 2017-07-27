@@ -64,7 +64,7 @@ def BuildHeadList(all_file_contents):
             head_list.append(line)
 
     # test
-    #print head_list
+    return head_list
 
 
 
@@ -85,37 +85,66 @@ def BuildAtomList(all_file_contents):
             atom_list.append(line)
 
     # return our new list
-    print atom_list
-    #return atom_list
+    #print atom_list
+    return atom_list
 
 
 
 
-def BuildTailList(all_file_contents ):
+def BuildTailList(all_file_contents):
     '''
     loop over the variable populated in ReadFileContents and append to another list called tail_list
     :param all_file_contents:
     :return:tail_list
     '''
     # all the lines that are below those that begin with ATOM (the lines left over)
-    print "TailList"
-    print all_file_contents
 
-def WriteNewFile():
+    # initialize our list
+    tail_list = []
+
+    # use enumerated list to get line numbers in original file
+    for counter1,line in enumerate(all_file_contents):
+
+        # get line numbers up to ATOM and assign to line_number
+        if line.startswith("ATOM"):
+            line_number = counter1
+
+    # use enumerated loop and line numbers > counter1 for this list
+    for counter2, line in enumerate(all_file_contents):
+        if counter2 > line_number:
+            tail_list.append(line)
+
+    # test
+    #print tail_list
+    return tail_list
+
+def WriteNewFile(head_list, atom_list, tail_list):
     '''
     take the three lists created above (head_list, atom_list, tail_list)
     as arguments and will write these lists to an output file called output.txt
     :return:
     '''
     # should look exactly like 1JKB.pdb when finished writing
-pass
+
+    new_file = open('output.txt','wb')
+    for line in head_list:
+        new_file.write(line)
+
+    for line in atom_list:
+        new_file.write(line)
+
+    for line in tail_list:
+        new_file.write(line)
+
 
 # needed if file being called from commandline or run in IDLE
 # this makes this object a module
 if __name__=='__main__':
 
-    # Test the functions
+    # Run the program
     file_name = AskForFileName()
     all_file_contents = ReadFileContents(file_name)
-    #head_list = BuildHeadList(all_file_contents)
+    head_list = BuildHeadList(all_file_contents)
     atom_list = BuildAtomList(all_file_contents)
+    tail_list = BuildTailList(all_file_contents)
+    WriteNewFile(head_list, atom_list, tail_list)
