@@ -1,0 +1,10 @@
+# Hauns Froehlingsdorf
+# Python Programming for Beginners
+# Week 5 Homework
+
+/usr/bin/python2.7 /home/user/PycharmProjects/ucscPython/Homework/homework_5_solution_program.py
+Please provide the name of the input file:
+1JKB.pdb
+The diff count is: 0
+
+Process finished with exit code 0
