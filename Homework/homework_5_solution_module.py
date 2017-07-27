@@ -35,12 +35,16 @@ def ReadFileContents(file_name):
     #open and read all lines
     all_file_contents = open(file_name)
 
+    # Take contents of file and pass to processing
+    BuildHeadList(all_file_contents)
+    BuildAtomList(all_file_contents)
+    BuildTailList(all_file_contents)
 
 def BuildHeadList(all_file_contents ):
     '''
     loop over the variable populated in ReadFileContents and append to another list called head_list the header information from the file.
     :param all_file_contents:
-    :return:all_file_contents
+    :return:head_list
     '''
     # These are the lines from the top of the file to the lines that start with the word ATOM.
 pass
@@ -49,7 +53,7 @@ def BuildAtomList(all_file_contents):
     '''
     loop over the variable populated in ReadFileContents and append to another list called atom_list
     :param all_file_contents:
-    :return:
+    :return:atom_list
     '''
     # all the lines that begin with ATOM and ONLY these lines.
 pass
@@ -58,14 +62,15 @@ def BuildTailList(all_file_contents ):
     '''
     loop over the variable populated in ReadFileContents and append to another list called tail_list
     :param all_file_contents:
-    :return:
+    :return:tail_list
     '''
     # all the lines that are below those that begin with ATOM (the lines left over)
 pass
 
 def WriteNewFile():
     '''
-    take the three lists created above (head_list, atom_list, tail_list) as arguments and will write these lists to an output file called output.txt
+    take the three lists created above (head_list, atom_list, tail_list)
+    as arguments and will write these lists to an output file called output.txt
     :return:
     '''
     # should look exactly like 1JKB.pdb when finished writing
