@@ -13,9 +13,18 @@
 def AskForFileName():
     '''
     ask the user for the name of the input file
-    :return:
+    :return:file_name
     '''
-pass
+
+    # ask user for file
+    file_name = raw_input('Please provide the name of the input file:\n')
+    if len(file_name) == 0:
+        print "you didn't enter anything"
+        AskForFileName()
+    else:
+        # return the value of the letter
+        print "You entered: ", file_name
+        return ReadFileContents(file_name)
 
 def ReadFileContents(file_name):
     '''
@@ -59,3 +68,9 @@ def WriteNewFile():
     '''
     # should look exactly like 1JKB.pdb when finished writing
 pass
+
+# needed if file being called from commandline or run in IDLE
+# this makes this object a module
+if __name__=='__main__':
+    # Test the functions
+    AskForFileName()
