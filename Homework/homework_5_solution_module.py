@@ -23,7 +23,7 @@ def AskForFileName():
         AskForFileName()
     else:
         # return the value of the letter
-        return ReadFileContents(file_name)
+        return file_name
 
 def ReadFileContents(file_name):
     '''
@@ -33,21 +33,40 @@ def ReadFileContents(file_name):
     '''
 
     #open and read all lines
-    all_file_contents = open(file_name)
+    in_file = open(file_name)
+    all_file_contents = in_file.readlines()
 
-    # Take contents of file and pass to processing
-    BuildHeadList(all_file_contents)
-    BuildAtomList(all_file_contents)
-    BuildTailList(all_file_contents)
+    return all_file_contents
 
-def BuildHeadList(all_file_contents ):
+def BuildHeadList(all_file_contents):
     '''
-    loop over the variable populated in ReadFileContents and append to another list called head_list the header information from the file.
+    loop over the variable populated in ReadFileContents and append to another list called head_list
+    the header information from the file.
     :param all_file_contents:
     :return:head_list
     '''
-    # These are the lines from the top of the file to the lines that start with the word ATOM.
-pass
+
+    # initialize our list
+    head_list = []
+
+    # use enumerated list to get line numbers in original file
+    for counter1,line in enumerate(all_file_contents):
+
+        # get line numbers up to ATOM and assign to line_number
+        if line.startswith("ATOM"):
+            line_number = counter1
+            # no need to go any further
+            break
+
+    # use enumerated list to create our first list up to line_number
+    for counter2,line in enumerate(all_file_contents):
+        if counter2 < line_number:
+            head_list.append(line)
+
+    # test
+    #print head_list
+
+
 
 def BuildAtomList(all_file_contents):
     '''
@@ -56,7 +75,21 @@ def BuildAtomList(all_file_contents):
     :return:atom_list
     '''
     # all the lines that begin with ATOM and ONLY these lines.
-pass
+
+    # initialize our list
+    atom_list = []
+
+    # for loop to get all lines that start with ATOM
+    for line in all_file_contents:
+        if line.startswith("ATOM"):
+            atom_list.append(line)
+
+    # return our new list
+    print atom_list
+    #return atom_list
+
+
+
 
 def BuildTailList(all_file_contents ):
     '''
@@ -65,7 +98,8 @@ def BuildTailList(all_file_contents ):
     :return:tail_list
     '''
     # all the lines that are below those that begin with ATOM (the lines left over)
-pass
+    print "TailList"
+    print all_file_contents
 
 def WriteNewFile():
     '''
@@ -79,5 +113,9 @@ pass
 # needed if file being called from commandline or run in IDLE
 # this makes this object a module
 if __name__=='__main__':
+
     # Test the functions
-    AskForFileName()
+    file_name = AskForFileName()
+    all_file_contents = ReadFileContents(file_name)
+    #head_list = BuildHeadList(all_file_contents)
+    atom_list = BuildAtomList(all_file_contents)
