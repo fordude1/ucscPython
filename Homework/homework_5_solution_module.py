@@ -126,13 +126,18 @@ def WriteNewFile(head_list, atom_list, tail_list):
     '''
     # should look exactly like 1JKB.pdb when finished writing
 
+    # open output.txt in write mode
     new_file = open('output.txt','wb')
+
+    # loop over head_list and append to file
     for line in head_list:
         new_file.write(line)
 
+    # loop over atom_list and append to file
     for line in atom_list:
         new_file.write(line)
 
+    # loop over tail_list and append to file
     for line in tail_list:
         new_file.write(line)
 
